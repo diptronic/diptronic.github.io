@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy Backend</title>
+</head>
+<body>
+    <script>
+        fetch('https://votre-backend.wuaze.com/backend.php', { mode: 'no-cors' })
+            .then(response => {
+                console.log("Backend response received.");
+                window.location.href = "https://diptronic.github.io/happy-lemon-roulette/";
+            })
+            .catch(error => {
+                console.error("Erreur avec le backend :", error);
+                alert("Une erreur est survenue. Veuillez réessayer plus tard.");
+            });
+    </script>
+</body>
+</html>
